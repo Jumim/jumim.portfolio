@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header>
       <div className='Header_Left'>
-        로고
+        <img src='image/logo.png' />
       </div>
       <div className='Header_Right'>
         <a href='https://github.com/Jumim' target='_blank'><FaGithub /></a>

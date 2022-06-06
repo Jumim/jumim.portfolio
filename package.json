@@ -11,6 +11,7 @@
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "node-sass": "^7.0.1",
+    "pageable": "^0.6.8",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",

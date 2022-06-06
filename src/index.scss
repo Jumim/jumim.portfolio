@@ -5,6 +5,7 @@ body {
   font-family: Pretendard, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
 }
 
 code {
@@ -15,4 +16,23 @@ code {
 div, p, span, a, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+/* default */
+h3 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+p, span {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.yellow {
+  color: #F5E189;
 }
