@@ -1,11 +1,129 @@
+/* Icon */
 .Icon {
   width: fit-content;
   padding: 5px 10px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 0px 1.2px rgba(256, 256, 256, 0.6);
+  box-shadow: 0 0 0 1.2px rgba(256, 256, 256, 0.6);
   border-radius: 6px;
   font-size: 14px;
   text-align: center;
+}
+
+/* StatusBar */
+.StatusBar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 33.3%;
+  padding: 10px 0 15px;
+  margin-top: 5px;
+  background: transparent;
+
+  span {
+    width: 100px;
+  }
+
+  ul {
+    width: 100%;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    li {
+      float: left;
+      position: relative;
+      width: 33.3%;
+      padding-top: 40px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 12px;
+      color: #666;
+
+      &:first-child {
+        font-size: 13px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 22.5px;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: #ddd;
+        content: '';
+      }
+
+      &:nth-child(1):before {
+        left: 50%;
+        border-radius: 2px 0 0 2px;
+      }
+
+      &:nth-child(3):before {
+        right: 50%;
+        border-radius: 0 2px 2px 0;
+      }
+
+      p:after {
+        position: absolute;
+        width: 41px;
+        height: 24px;
+        margin-right: -20px;
+        background-size: auto 24px;
+        background-position: -58px 0;
+        top: 0;
+        right: 0;
+        color: #fff;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: -.5px;
+      }
+
+      p:before {
+        position: absolute;
+        top: 22.5px;
+        left: 50%;
+        right: 0;
+        height: 6px;
+        content: '';
+      }
+    }
+  }
+
+  &.Status1 {
+    ul {
+      li:nth-child(1):before {
+        background: #96a5ff;
+      }
+    }
+  }
+
+  &.Status2, &.Status2-5 {
+    ul {
+      li:nth-child(-n+2):before {
+        background: #96a5ff;
+      }
+    }
+  }
+
+  &.Status2 {
+    ul {
+      li:nth-child(2) {
+        p:before {
+          background:#ddd;
+        }
+      }
+    }
+  }
+
+  &.Status3 {
+    li:nth-child(-n+3):before {
+      background: #96a5ff;
+    }
+  }
 }
 
 /* header */
@@ -26,7 +144,7 @@ header {
   box-shadow: 2px 5px 20px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
 
-  .Header_Left {
+  .HeaderLeft {
     width: 25px;
     height: 25px;
 
@@ -36,7 +154,7 @@ header {
     }
   }
 
-  .Header_Right {
+  .HeaderRight {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,8 +172,33 @@ header {
     }
   }
 }
+/* ScrollDown */
 
+.ScrollDown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  z-index: 2;
+
+  p {
+    font-size: 16px;
+  }
+
+  span {
+    display: block;
+    width: 2px;
+    height: 50px;
+    background-color: #fff;
+  }
+}
 /* Swiper */
+
 .ContentsArea {
   width: 100%;
   height: 100vh;
@@ -73,8 +216,8 @@ header {
   border-radius: 0;
   background-color: rgba(0,0,0,0.8);
 }
-
 /* MainPage */
+
 .MainPage {
   display: flex;
   flex-direction: row;
@@ -84,7 +227,7 @@ header {
   box-sizing: border-box;
   color: #fff;
 
-  .Main_Left {
+  .MainLeft {
     width: 50%;
 
     img {
@@ -94,7 +237,7 @@ header {
     }
   }
 
-  .Main_Right {
+  .MainRight {
     width: 50%;
     padding: 150px 200px;
     box-sizing: border-box;
@@ -108,17 +251,17 @@ header {
       margin-bottom: 15px;
     }
 
-    .MyIntro {
+    .MainIntro {
       margin-bottom: 40px;
     }
 
-    .MyInfo {
+    .MainInfo {
       display: flex;
       flex-direction: column;
       gap: 15px;
       margin-bottom: 40px;
 
-      .Info_Text {
+      .InfoText {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -126,7 +269,7 @@ header {
       }
     }
 
-    .MyStack {
+    .MainStack {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -135,19 +278,92 @@ header {
     }
   }
 }
+/* IntroPage */
+
+.IntroPage {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  box-sizing: border-box;
+  color: #fff;
+
+  .IntroMain {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 40px;
+
+    p {
+      font-size: 14px;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+  }
+
+  .IntroCareer,
+  .IntroStack {
+    padding: 0 280px;
+  }
+
+  .IntroStack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 @media (max-width: 1400px) {
   .MainPage {
-    .Main_Left {
+    .MainLeft {
       display: none;
     }
 
-    .Main_Right {
+    .MainRight {
       width: 100%;
       padding: 150px 20%;
     }
   }
-}
 
+  .IntroPage {
+    .IntroMain {
+      padding-top: 60px;
+      margin-bottom: 30px;
+    }
+
+    .IntroCareer,
+    .IntroStack {
+      padding: 0 15%;
+    }
+  }
+}
 @media (pointer: coarse) {
+  .ScrollDown {
+    p {
+      font-size: 14px;
+    }
+
+    span {
+      height: 30px;
+    }
+  }
+
+  .StatusBar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+
+    span {
+      padding-left: 20px;
+    }
+  }
+
+  .IntroPage {
+    .IntroCareer,
+    .IntroStack {
+      padding: 0 5%;
+    }
+  }
 }

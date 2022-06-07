@@ -1,11 +1,15 @@
+import { useState } from 'react';
 import { Pagination, Mousewheel } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Header, MainPage } from 'components';
+import { Header, ScrollDown } from 'components';
+import { MainPage, IntroPage } from 'page';
 import './App.scss';
 
 function App() {
+  const [nextState, setNextState] = useState(false);
+
   return (
     <div className="App">
       <Header />
@@ -21,8 +25,12 @@ function App() {
           <MainPage />
         </SwiperSlide>
         <SwiperSlide>
+          <IntroPage />
+        </SwiperSlide>
+        <SwiperSlide>
         </SwiperSlide>
       </Swiper>
+      <ScrollDown />
     </div>
   );
 }

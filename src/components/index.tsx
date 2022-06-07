@@ -1,3 +1,4 @@
 export { Header } from './Header';
-export { MainPage } from './MainPage';
 export { Icon } from './Icon';
+export { ScrollDown } from './ScrollDown';
+export { StatusBar } from './StatusBar';
