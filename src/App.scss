@@ -1,3 +1,11 @@
+@mixin pageDefault {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
 /* Icon */
 .Icon {
   width: fit-content;
@@ -12,15 +20,17 @@
 /* StatusBar */
 .StatusBar {
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
   width: 33.3%;
   padding: 10px 0 15px;
-  margin-top: 5px;
+  margin-top: 25px;
   background: transparent;
 
   span {
     width: 100px;
+    padding-left: 66px;
   }
 
   ul {
@@ -101,7 +111,8 @@
     }
   }
 
-  &.Status2, &.Status2-5 {
+  &.Status2,
+  &.Status2-5 {
     ul {
       li:nth-child(-n+2):before {
         background: #96a5ff;
@@ -113,7 +124,7 @@
     ul {
       li:nth-child(2) {
         p:before {
-          background:#ddd;
+          background: #ddd;
         }
       }
     }
@@ -172,8 +183,8 @@ header {
     }
   }
 }
-/* ScrollDown */
 
+/* ScrollDown */
 .ScrollDown {
   display: flex;
   flex-direction: column;
@@ -198,7 +209,6 @@ header {
   }
 }
 /* Swiper */
-
 .ContentsArea {
   width: 100%;
   height: 100vh;
@@ -216,16 +226,12 @@ header {
   border-radius: 0;
   background-color: rgba(0,0,0,0.8);
 }
-/* MainPage */
 
+/* MainPage */
 .MainPage {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 100vh;
-  padding-top: 50px;
-  box-sizing: border-box;
-  color: #fff;
+  @include pageDefault;
 
   .MainLeft {
     width: 50%;
@@ -278,14 +284,10 @@ header {
     }
   }
 }
-/* IntroPage */
 
+/* IntroPage */
 .IntroPage {
-  width: 100%;
-  height: 100vh;
-  padding-top: 50px;
-  box-sizing: border-box;
-  color: #fff;
+  @include pageDefault;
 
   .IntroMain {
     display: flex;
@@ -315,6 +317,73 @@ header {
   }
 }
 
+/* CareerPage */
+.CareerPage {
+  @include pageDefault;
+  padding-left: 400px;
+  padding-right: 400px;
+
+  .CareerTitle {
+    margin: 80px 0 40px;
+  }
+
+  .CareerHistory {
+    margin: 40px 0;
+
+    div {
+      position: relative;
+      padding: 0 0 0 48px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: #ddd;
+      }
+
+      &:first-child:before {
+        top: 10px;
+        height: calc(100% - 10px);
+      }
+
+      p {
+        font-size: 22px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 17px;
+          height: 17px;
+          border-radius: 100%;
+          background: #96a5ff;
+          box-sizing: border-box;
+        }
+      }
+
+      ul {
+        padding: 20px 0 65px;
+
+        li {
+          span {
+            font-size: 18px;
+            color: #96a5ff;
+          }
+
+          display: flex;
+          gap: 12px;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1400px) {
   .MainPage {
     .MainLeft {
@@ -338,7 +407,13 @@ header {
       padding: 0 15%;
     }
   }
+
+  .CareerPage {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }
+
 @media (pointer: coarse) {
   .ScrollDown {
     p {
@@ -351,9 +426,9 @@ header {
   }
 
   .StatusBar {
-    flex-direction: column;
-    align-items: flex-start;
     width: 50%;
+    gap: 0px;
+    margin-top: 10px;
 
     span {
       padding-left: 20px;
