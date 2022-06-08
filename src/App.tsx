@@ -8,7 +8,7 @@ import { MainPage, IntroPage, CareerPage } from 'page';
 import './App.scss';
 
 function App() {
-  const [nextState, setNextState] = useState(false);
+  const [lastPage, setLastPage] = useState(false);
 
   return (
     <div className="App">
@@ -20,6 +20,8 @@ function App() {
         slidesPerView={1}
         pagination={{ clickable: true }}
         mousewheel={true}
+        onSlidePrevTransitionEnd={() => setLastPage(false)}
+        onReachEnd={() => setLastPage(true)}
       >
         <SwiperSlide>
           <MainPage />
@@ -31,7 +33,7 @@ function App() {
           <CareerPage />
         </SwiperSlide>
       </Swiper>
-      <ScrollDown />
+      <ScrollDown className={ !lastPage ? 'on' : 'off' } />
     </div>
   );
 }

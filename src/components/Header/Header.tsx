@@ -1,4 +1,5 @@
 import { FaGithub, FaGithubAlt } from 'react-icons/fa';
+import './Header.scss';
 
 export const Header = () => {
   return (

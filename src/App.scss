@@ -1,218 +1,50 @@
+@import '_variable.scss';
+
+/* default */
+h4 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 2.4em;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+p, span {
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+ul {
+	list-style:none;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
 @mixin pageDefault {
   width: 100%;
   height: 100vh;
   padding-top: 50px;
   box-sizing: border-box;
-  color: #fff;
+  color: $white;
 }
 
-/* Icon */
-.Icon {
-  width: fit-content;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  box-shadow: 0 0 0 1.2px rgba(256, 256, 256, 0.6);
-  border-radius: 6px;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* StatusBar */
-.StatusBar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  width: 33.3%;
-  padding: 10px 0 15px;
-  margin-top: 25px;
-  background: transparent;
-
-  span {
-    width: 100px;
-    padding-left: 66px;
-  }
-
-  ul {
-    width: 100%;
-
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-
-    li {
-      float: left;
-      position: relative;
-      width: 33.3%;
-      padding-top: 40px;
-      font-size: 15px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 12px;
-      color: #666;
-
-      &:first-child {
-        font-size: 13px;
-      }
-
-      &:before {
-        position: absolute;
-        top: 22.5px;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background: #ddd;
-        content: '';
-      }
-
-      &:nth-child(1):before {
-        left: 50%;
-        border-radius: 2px 0 0 2px;
-      }
-
-      &:nth-child(3):before {
-        right: 50%;
-        border-radius: 0 2px 2px 0;
-      }
-
-      p:after {
-        position: absolute;
-        width: 41px;
-        height: 24px;
-        margin-right: -20px;
-        background-size: auto 24px;
-        background-position: -58px 0;
-        top: 0;
-        right: 0;
-        color: #fff;
-        font-size: 11px;
-        line-height: 16px;
-        letter-spacing: -.5px;
-      }
-
-      p:before {
-        position: absolute;
-        top: 22.5px;
-        left: 50%;
-        right: 0;
-        height: 6px;
-        content: '';
-      }
-    }
-  }
-
-  &.Status1 {
-    ul {
-      li:nth-child(1):before {
-        background: #96a5ff;
-      }
-    }
-  }
-
-  &.Status2,
-  &.Status2-5 {
-    ul {
-      li:nth-child(-n+2):before {
-        background: #96a5ff;
-      }
-    }
-  }
-
-  &.Status2 {
-    ul {
-      li:nth-child(2) {
-        p:before {
-          background: #ddd;
-        }
-      }
-    }
-  }
-
-  &.Status3 {
-    li:nth-child(-n+3):before {
-      background: #96a5ff;
-    }
-  }
-}
-
-/* header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  padding: 0 14%;
-  background-color: #232323;
-  color: #fff;
-  box-sizing: border-box;
-  box-shadow: 2px 5px 20px 2px rgba(0, 0, 0, 0.2);
-  z-index: 99;
-
-  .HeaderLeft {
-    width: 25px;
-    height: 25px;
-
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
-  }
-
-  .HeaderRight {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-
-    a {
-      width: 20px;
-      height: 20px;
-      color: #fff;
-
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
-
-/* ScrollDown */
-.ScrollDown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  color: #fff;
-  z-index: 2;
-
-  p {
-    font-size: 16px;
-  }
-
-  span {
-    display: block;
-    width: 2px;
-    height: 50px;
-    background-color: #fff;
-  }
-}
 /* Swiper */
 .ContentsArea {
   width: 100%;
   height: 100vh;
-  background-color: #232323;
+  background-color: $gray;
   overflow-y: hidden;
 
   ::-webkit-scrollbar {
@@ -255,6 +87,10 @@ header {
       align-items: flex-end;
       gap: 12px;
       margin-bottom: 15px;
+
+      h1 {
+        color: $yellow;
+      }
     }
 
     .MainIntro {
@@ -272,6 +108,33 @@ header {
         flex-direction: row;
         align-items: center;
         gap: 10px;
+
+        svg {
+          font-size: 1.2em;
+        }
+
+        a {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 2px;
+            background-color: $purple;
+            bottom: -5px;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+          }
+
+          &:hover:before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+        }
       }
     }
 
@@ -297,7 +160,7 @@ header {
     margin-bottom: 40px;
 
     p {
-      font-size: 14px;
+      font-size: 0.8em;
     }
 
     h3 {
@@ -341,7 +204,7 @@ header {
         top: 0;
         width: 2px;
         height: 100%;
-        background: #ddd;
+        background: $rightgray;
       }
 
       &:first-child:before {
@@ -355,12 +218,12 @@ header {
         &:before {
           content: "";
           position: absolute;
-          left: 0px;
-          top: 0px;
-          width: 17px;
-          height: 17px;
+          left: 2px;
+          top: 2px;
+          width: 14px;
+          height: 14px;
           border-radius: 100%;
-          background: #96a5ff;
+          background: $purple;
           box-sizing: border-box;
         }
       }
@@ -411,30 +274,14 @@ header {
   .CareerPage {
     padding-left: 20%;
     padding-right: 20%;
+
+    .CareerTitle {
+      margin-top: 60px;
+    }
   }
 }
 
 @media (pointer: coarse) {
-  .ScrollDown {
-    p {
-      font-size: 14px;
-    }
-
-    span {
-      height: 30px;
-    }
-  }
-
-  .StatusBar {
-    width: 50%;
-    gap: 0px;
-    margin-top: 10px;
-
-    span {
-      padding-left: 20px;
-    }
-  }
-
   .IntroPage {
     .IntroCareer,
     .IntroStack {

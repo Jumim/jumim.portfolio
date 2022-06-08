@@ -9,15 +9,12 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: Pretendard, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 div, p, span, a, h1, h2, h3, h4, h5, h6, ul ,li {
@@ -25,37 +22,8 @@ div, p, span, a, h1, h2, h3, h4, h5, h6, ul ,li {
   padding: 0;
 }
 
-/* default */
-h4 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 34px;
-}
-
-h2 {
-  font-size: 44px;
-}
-
-h1 {
-  font-size: 54px;
-}
-
-p, span {
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-}
-
-ul {
-	list-style:none;
-}
-
-.yellow {
-  color: #F5E189;
-}
-
-.KCC-eunyoung {
-  font-family: 'KCC-eunyoung', Pretendard, 'Segoe UI', 'Roboto', sans-serif;
+@media (pointer: coarse) {
+  body {
+    font-size: 16px;
+  }
 }

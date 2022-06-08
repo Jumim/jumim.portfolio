@@ -1,4 +1,4 @@
-export { Header } from './Header';
-export { Icon } from './Icon';
-export { ScrollDown } from './ScrollDown';
-export { StatusBar } from './StatusBar';
+export { Header } from './Header/Header';
+export { Icon } from './Icon/Icon';
+export { ScrollDown } from './ScrollDown/ScrollDown';
+export { StatusBar } from './StatusBar/StatusBar';

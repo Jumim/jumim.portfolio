@@ -7,7 +7,7 @@ export const IntroPage = () => {
       <div className='IntroMain'>
         <p>항상 도전하는 개발자</p>
         <h1>이주미</h1>
-        <h3 className='KCC-eunyoung'>"First thought, Best thought"</h3>
+        <p></p>
       </div>
       <div className='IntroStack'>
         {

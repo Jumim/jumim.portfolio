@@ -1,4 +1,5 @@
 import React from 'react';
+import './Icon.scss';
 
 interface IconType {
   children: React.ReactChild | React.ReactChild[]

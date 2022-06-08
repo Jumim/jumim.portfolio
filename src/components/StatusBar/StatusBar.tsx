@@ -1,3 +1,5 @@
+import './StatusBar.scss';
+
 interface StatusBarType {
   className: string
   text: string

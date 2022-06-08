@@ -1,0 +1,132 @@
+@import '_variable.scss';
+
+.StatusBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 33.3%;
+  padding: 10px 0 15px;
+  margin-top: 25px;
+  background: transparent;
+
+  span {
+    width: 100px;
+    padding-left: 66px;
+  }
+
+  ul {
+    width: 100%;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    li {
+      float: left;
+      position: relative;
+      width: 33.3%;
+      padding-top: 40px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 12px;
+      color: #666;
+
+      &:first-child {
+        font-size: 13px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 22.5px;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: $rightgray;
+        content: '';
+      }
+
+      &:nth-child(1):before {
+        left: 50%;
+        border-radius: 2px 0 0 2px;
+      }
+
+      &:nth-child(3):before {
+        right: 50%;
+        border-radius: 0 2px 2px 0;
+      }
+
+      p:after {
+        position: absolute;
+        width: 41px;
+        height: 24px;
+        margin-right: -20px;
+        background-size: auto 24px;
+        background-position: -58px 0;
+        top: 0;
+        right: 0;
+        color: #fff;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: -.5px;
+      }
+
+      p:before {
+        position: absolute;
+        top: 22.5px;
+        left: 50%;
+        right: 0;
+        height: 6px;
+        content: '';
+      }
+    }
+  }
+
+  &.Status1 {
+    ul {
+      li:nth-child(1):before {
+        background: $purple;
+      }
+    }
+  }
+
+  &.Status2,
+  &.Status2-5 {
+    ul {
+      li:nth-child(-n+2):before {
+        background: $purple;
+      }
+    }
+  }
+
+  &.Status2 {
+    ul {
+      li:nth-child(2) {
+        p:before {
+          background: $rightgray;
+        }
+      }
+    }
+  }
+
+  &.Status3 {
+    li:nth-child(-n+3):before {
+      background: $purple;
+    }
+  }
+}
+
+@media (pointer: coarse) {
+  .StatusBar {
+    width: 50%;
+    gap: 0px;
+    margin-top: 10px;
+
+    span {
+      padding-left: 20px;
+    }
+  }
+}
