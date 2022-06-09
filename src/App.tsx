@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Header, ScrollDown } from 'components';
-import { MainPage, IntroPage, CareerPage } from 'page';
+import { MainPage, IntroPage, CareerPage, ProjectPage } from 'page';
 import './App.scss';
 
 function App() {
@@ -31,6 +31,9 @@ function App() {
         </SwiperSlide>
         <SwiperSlide>
           <CareerPage />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectPage />
         </SwiperSlide>
       </Swiper>
       <ScrollDown className={ !lastPage ? 'on' : 'off' } />

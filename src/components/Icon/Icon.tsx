@@ -3,11 +3,12 @@ import './Icon.scss';
 
 interface IconType {
   children: React.ReactChild | React.ReactChild[]
+  className?: 'gray' | undefined
 }
 
-export const Icon = ({children}: IconType) => {
+export const Icon = ({children, className}: IconType) => {
   return (
-    <div className='Icon'>
+    <div className={['Icon', (className === undefined ? 'default' : className)].join(' ')}>
       {children}
     </div>
   )

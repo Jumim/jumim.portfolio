@@ -1,1 +1,1 @@
-export { MyStack } from './data';
+export { MyStack, MyProject } from './data';

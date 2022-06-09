@@ -9,3 +9,7 @@ export const MyStack = [
   {name: 'Java', status: 1},
   {name: 'PHP', status: 1}
 ];
+
+export const MyProject = [
+  {title: '감정 일기장', img: 'emotion-1.png', tag: ['React', 'TypeScript'], url: 'https://github.com/Jumim/emotion-diary'}
+];
