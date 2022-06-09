@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/jumim-portfolio/static/css/main.40d94e7a.css",
-    "main.js": "/jumim-portfolio/static/js/main.80018731.js",
+    "main.css": "/jumim-portfolio/static/css/main.b292fa7a.css",
+    "main.js": "/jumim-portfolio/static/js/main.4c7872fc.js",
     "index.html": "/jumim-portfolio/index.html",
-    "main.40d94e7a.css.map": "/jumim-portfolio/static/css/main.40d94e7a.css.map",
-    "main.80018731.js.map": "/jumim-portfolio/static/js/main.80018731.js.map"
+    "main.b292fa7a.css.map": "/jumim-portfolio/static/css/main.b292fa7a.css.map",
+    "main.4c7872fc.js.map": "/jumim-portfolio/static/js/main.4c7872fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.40d94e7a.css",
-    "static/js/main.80018731.js"
+    "static/css/main.b292fa7a.css",
+    "static/js/main.4c7872fc.js"
   ]
 }

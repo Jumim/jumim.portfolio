@@ -11,5 +11,5 @@ export const MyStack = [
 ];
 
 export const MyProject = [
-  {title: '감정 일기장', img: 'emotion-1.png', tag: ['React', 'TypeScript'], url: 'https://github.com/Jumim/emotion-diary'}
+  {title: '감성 일기장', img: 'emotion-1.png', tag: ['React', 'TypeScript', 'css', 'firebase', 'CRUD', 'Context API'], url: 'https://github.com/Jumim/emotion-diary'}
 ];
