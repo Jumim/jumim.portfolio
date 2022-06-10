@@ -1,1 +1,1 @@
-export { MyStack, MyProject } from './data';
+export { MySkill, MyProject } from './data';

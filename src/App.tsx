@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Header, ScrollDown } from 'components';
-import { MainPage, IntroPage, CareerPage, ProjectPage } from 'page';
+import { MainPage, SkillPage, CareerPage, ProjectPage } from 'page';
 import './App.scss';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <Swiper
-        className='ContentsArea'
+        className='ContentsSwiper'
         modules={[Pagination, Mousewheel]}
         direction={'vertical'}
         slidesPerView={1}
@@ -27,7 +27,7 @@ function App() {
           <MainPage />
         </SwiperSlide>
         <SwiperSlide>
-          <IntroPage />
+          <SkillPage />
         </SwiperSlide>
         <SwiperSlide>
           <CareerPage />

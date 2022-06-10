@@ -6,11 +6,11 @@ import { MyProject } from 'etc';
 export const ProjectPage = () => {
   return (
     <div className='ProjectPage'>
-      <div className='ProjectPageTitle'>
+      <div className='ProjectTitle'>
         <h3>프로젝트</h3>
       </div>
       <Swiper
-        className='ProjectArea'
+        className='ProjectSwiper'
         loop={true}
         centeredSlides={true}
         spaceBetween={10}
@@ -20,12 +20,7 @@ export const ProjectPage = () => {
             slidesPerView: 1,
             spaceBetween: 10,
           },
-          1400: {
-            centeredSlides: true,
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          1780: {
+          1280: {
             centeredSlides: true,
             slidesPerView: 3,
             spaceBetween: 20,

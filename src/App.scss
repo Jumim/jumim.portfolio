@@ -1,49 +1,17 @@
 @import '_variable.scss';
 
-/* default */
-h4 {
-  font-size: 1.6em;
-}
-
-h3 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 2.4em;
-}
-
-h1 {
-  font-size: 2.8em;
-}
-
-p, span {
-  font-size: 0.8em;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-}
-
-ul {
-	list-style:none;
-}
-
-a {
-  text-decoration: none;
-  color: $white;
-}
-
 @mixin pageDefault {
   width: 100%;
-  height: 100vh;
-  padding-top: 50px;
+  height: 100%;
   box-sizing: border-box;
   color: $white;
 }
 
 /* Swiper */
-.ContentsArea {
+.ContentsSwiper {
   width: 100%;
   height: 100vh;
+  margin-top: 50px;
   background-color: $gray;
   overflow-y: hidden;
 
@@ -77,7 +45,7 @@ a {
 
   .MainRight {
     width: 50%;
-    padding: $w - 50px $w;
+    padding: 10.5%;
     box-sizing: border-box;
     text-align: left;
 
@@ -138,7 +106,7 @@ a {
       }
     }
 
-    .MainStack {
+    .MainSkillList {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -148,15 +116,16 @@ a {
   }
 }
 
-/* IntroPage */
-.IntroPage {
+/* SkillPage */
+.SkillPage {
   @include pageDefault;
+  padding-bottom: 60px;
 
-  .IntroMain {
+  .SkillTitle {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 80px;
+    margin-top: 100px;
     margin-bottom: 40px;
 
     p {
@@ -168,26 +137,23 @@ a {
     }
   }
 
-  .IntroCareer,
-  .IntroStack {
-    padding: 0 280px;
-  }
-
-  .IntroStack {
+  .SkillList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0 12%;
   }
 }
 
 /* CareerPage */
 .CareerPage {
   @include pageDefault;
-  padding-left: $w + 200px;
-  padding-right: $w + 200px;
+  padding: 0 14.2%;
+  padding-bottom: 60px;
 
   .CareerTitle {
-    margin: 80px 0 40px;
+    margin-top: 100px;
+    margin-bottom: 40px;
   }
 
   .CareerHistory {
@@ -195,7 +161,7 @@ a {
 
     div {
       position: relative;
-      padding: 0 0 0 48px;
+      padding: 0 0 0 32px;
 
       &:before {
         content: "";
@@ -209,7 +175,6 @@ a {
 
       &:first-child:before {
         top: 10px;
-        height: calc(100% - 10px);
       }
 
       p {
@@ -219,7 +184,7 @@ a {
           content: "";
           position: absolute;
           left: 2px;
-          top: 2px;
+          top: 4px;
           width: 14px;
           height: 14px;
           border-radius: 100%;
@@ -229,7 +194,7 @@ a {
       }
 
       ul {
-        padding: 20px 0 65px;
+        padding: 20px 0 60px;
 
         li {
           span {
@@ -250,15 +215,20 @@ a {
 /* ProjectPage */
 .ProjectPage {
   @include pageDefault;
-  padding-left: $w;
-  padding-right: $w;
+  padding: 0 14.2%;
+  padding-bottom: 60px;
 
-  .ProjectPageTitle {
-    margin: 80px 0 60px;
+  .ProjectTitle {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  .ProjectSwiper {
+
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .MainPage {
     .MainLeft {
       display: none;
@@ -266,46 +236,109 @@ a {
 
     .MainRight {
       width: 100%;
-      padding: 150px 20%;
+      padding-top: 120px;
     }
   }
 
-  .IntroPage {
-    .IntroMain {
-      padding-top: 60px;
-      margin-bottom: 30px;
-    }
-
-    .IntroCareer,
-    .IntroStack {
-      padding: 0 15%;
+  .SkillPage {
+    .SkillTitle {
+      margin-top: 80px;
     }
   }
 
   .CareerPage {
-    padding-left: 20%;
-    padding-right: 20%;
+    .CareerTitle {
+      margin-top: 80px;
+    }
   }
 
   .ProjectPage {
-    padding-left: 20%;
-    padding-right: 20%;
+    .ProjectTitle {
+      margin-top: 80px;
+    }
   }
 }
 
 @media (pointer: coarse) {
-  .IntroPage {
-    .IntroCareer,
-    .IntroStack {
-      padding: 0 8%;
+  .MainPage {
+    .MainRight {
+      padding-top: 50%;
+    }
+  }
+
+  .SkillPage {
+    .SkillTitle {
+      margin-top: 18%;
+    }
+
+    .SkillList {
+      padding: 0 6%;
     }
   }
 
   .CareerPage {
-    padding: 0 8%;
+    padding: 0 10%;
+
+    .CareerTitle {
+      margin-top: 18%;
+    }
   }
 
   .ProjectPage {
-    padding: 0 8%;
+    padding: 0 10%;
+
+    .ProjectTitle {
+      margin-top: 18%;
+    }
+  }
+}
+
+@media (pointer: coarse) and (orientation:landscape) {
+  .MainPage {
+    .MainRight {
+      padding-top: 5.2%;
+    }
+  }
+
+  .SkillPage {
+    .SkillTitle {
+      margin-top: 4.2%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .CareerPage {
+    .CareerTitle {
+      margin-top: 4.2%;
+    }
+
+    .CareerHistory {
+      display: flex;
+      flex-flow: row;
+      gap: 50px;
+
+      div {
+        &:before {
+          top: 10px;
+        }
+
+        p {
+          &:before {
+            top: 6px;
+          }
+        }
+
+        ul {
+          padding-bottom: 12px;
+        }
+      }
+    }
+  }
+
+  .ProjectPage {
+    .ProjectTitle {
+      margin-top: 4.2%;
+      margin-bottom: 20px;
+    }
   }
 }

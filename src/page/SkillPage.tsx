@@ -1,17 +1,17 @@
 import { StatusBar } from 'components';
-import { MyStack } from 'etc';
+import { MySkill } from 'etc';
 
-export const IntroPage = () => {
+export const SkillPage = () => {
   return (
-    <div className='IntroPage'>
-      <div className='IntroMain'>
+    <div className='SkillPage'>
+      <div className='SkillTitle'>
         <p>항상 도전하는 개발자</p>
         <h1>이주미</h1>
         <p></p>
       </div>
-      <div className='IntroStack'>
+      <div className='SkillList'>
         {
-          MyStack.map((data: any, i: number) =>
+          MySkill.map((data: any, i: number) =>
             <StatusBar key={'IntroStack_' + i} className={data.status} text={data.name} />
           )
         }

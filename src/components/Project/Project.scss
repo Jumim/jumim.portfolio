@@ -3,7 +3,7 @@
 .Project {
   position: relative;
   width: 100%;
-  padding-top: 100%;
+  padding-top: 60vh;
   margin: 0 auto;
   background-color: $white;
   color: $gray;
@@ -20,15 +20,22 @@
     box-sizing: border-box;
   }
 
-  .ProjectTitle {
+  .ProjectName {
     margin-bottom: 20px;
   }
 
   .ProjectImg {
-    margin-bottom: 20px;
-
     img {
       width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .ProjectContent {
+    margin: 25px 0;
+
+    span {
+      font-size: 1em;
     }
   }
 
@@ -48,6 +55,15 @@
     a {
       font-size: 25px;
       color: $gray;
+    }
+  }
+}
+
+
+@media (pointer: coarse) and (orientation:landscape) {
+  .Project {
+    .ProjectImg {
+      display: none;
     }
   }
 }

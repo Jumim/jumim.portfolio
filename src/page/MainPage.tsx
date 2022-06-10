@@ -1,7 +1,7 @@
 import { FaPhoneAlt, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { Icon } from 'components';
-import { MyStack } from 'etc';
+import { MySkill } from 'etc';
 
 export const MainPage = () => {
   return (
@@ -22,9 +22,9 @@ export const MainPage = () => {
           <p className='InfoText'><MdEmail /> <a href='mailto:a25320@naver.com'>a25320@naver.com</a></p>
           <p className='InfoText'><FaGithub /> <a href='https://github.com/Jumim'>https://github.com/Jumim</a></p>
         </div>
-        <div className='MainStack'>
+        <div className='MainSkillList'>
           {
-            MyStack.map((data: any, i: number) =>
+            MySkill.map((data: any, i: number) =>
               <Icon key={'MainStack_' + i}>
                 <p>{data.name}</p>
               </Icon>

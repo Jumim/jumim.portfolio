@@ -4,8 +4,9 @@ import './Project.scss';
 
 interface ProjectType {
   projectData: {
-    title: string
+    name: string
     img: string
+    content: string
     tag: []
     url: string
   }
@@ -15,11 +16,14 @@ export const Project = ({ projectData }: ProjectType) => {
   return (
     <div className='Project'>
       <div>
-        <div className='ProjectTitle'>
-          <h4>{projectData.title}</h4>
+        <div className='ProjectName'>
+          <h4>{projectData.name}</h4>
         </div>
         <div className='ProjectImg'>
           <img src={`image/${projectData.img}`} />
+        </div>
+        <div className='ProjectContent'>
+          {projectData.content}
         </div>
         <div className='ProjectTag'>
           {

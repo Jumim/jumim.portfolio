@@ -1,3 +1,4 @@
+@import '_variable.scss';
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 @font-face {
@@ -20,6 +21,38 @@ body {
 div, p, span, a, h1, h2, h3, h4, h5, h6, ul ,li {
   margin: 0;
   padding: 0;
+}
+
+/* default */
+h4 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 2.4em;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+p, span {
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+ul {
+	list-style:none;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
 }
 
 @media (pointer: coarse) {
