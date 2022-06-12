@@ -11,5 +11,7 @@ export const MySkill = [
 ];
 
 export const MyProject = [
-  {name: '감성 일기장', img: 'emotion-1.png', content: 'React를 학습하면서 만든 간단한 다이어리 페이지 입니다.', tag: ['React', 'TypeScript', 'css', '반응형', 'firebase', 'CRUD', 'Context API'], url: 'https://github.com/Jumim/emotion-diary'}
+  {name: '감성 일기장', img: 'emotion-1.png', content: 'React를 학습하면서 만든 간단한 다이어리 페이지 입니다.',
+  tag: ['React', 'TypeScript', 'css', '반응형', 'firebase', 'CRUD', 'Context API'],
+  githubUrl: 'https://github.com/Jumim/emotion-diary', url: 'https://jumi-react-emotion-diary.web.app/'}
 ];

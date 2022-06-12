@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
 import { Project } from 'components';
-import { MyProject } from 'etc';
+import { MyProject } from 'data';
 
 export const ProjectPage = () => {
   return (

@@ -51,6 +51,9 @@
     position: absolute;
     bottom: 20px;
     right: 22px;
+    display: flex;
+    flex-flow: row;
+    gap: 15px;
 
     a {
       font-size: 25px;

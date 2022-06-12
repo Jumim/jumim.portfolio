@@ -1,5 +1,5 @@
 import { StatusBar } from 'components';
-import { MySkill } from 'etc';
+import { MySkill } from 'data';
 
 export const SkillPage = () => {
   return (

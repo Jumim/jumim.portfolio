@@ -1,7 +1,7 @@
 import { FaPhoneAlt, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { Icon } from 'components';
-import { MySkill } from 'etc';
+import { MySkill } from 'data';
 
 export const MainPage = () => {
   return (

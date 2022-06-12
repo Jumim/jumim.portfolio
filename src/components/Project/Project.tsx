@@ -1,4 +1,4 @@
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLink } from 'react-icons/fa';
 import { Icon } from 'components';
 import './Project.scss';
 
@@ -8,6 +8,7 @@ interface ProjectType {
     img: string
     content: string
     tag: []
+    githubUrl: string
     url: string
   }
 }
@@ -33,7 +34,8 @@ export const Project = ({ projectData }: ProjectType) => {
           }
         </div>
         <div className='ProjectLink'>
-          <a href={projectData.url} target='_blank'><FaGithub /></a>
+          <a href={projectData.githubUrl} target='_blank'><FaGithub /></a>
+          <a href={projectData.url} target='_blank'><FaLink /></a>
         </div>
       </div>
     </div>
