@@ -8,23 +8,20 @@ export const CareerPage = () => {
         <div>
           <p>2022</p>
           <ul>
-            <li><span>2월</span>플레버스 퇴사</li>
+            <li><span>플레버스</span>플레버스 웹 프론트엔드 담당(React)</li>
           </ul>
         </div>
         <div>
           <p>2021</p>
           <ul>
-            <li><span>3월</span>플레버스 입사</li>
-            <li><span>1월</span>이브필라테스 퇴사</li>
+            <li><span>플레버스</span>플레버스 기획 참여 <br /> 플레버스 웹 프론트엔드 담당(React) </li>
           </ul>
         </div>
         <div>
           <p>2020</p>
           <ul>
-            <li><span>9월</span>이브필라테스 입사</li>
-            <li><span>6월</span>디지털존 퇴사</li>
-            <li><span>3월</span>디지털존 입사</li>
-            <li><span>2월</span>인하공업전문대학 졸업</li>
+            <li><span>이브필라테스</span>자사 쇼핑몰 웹 개발 및 유지보수(html, css, jquery) <br /> 자사 쇼핑몰 관련 신규 서비스 개발(PHP)</li>
+            <li><span>디지털존</span>자사 서비스 웹 유지보수(Java Spring)</li>
           </ul>
         </div>
       </div>
