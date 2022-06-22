@@ -116,12 +116,14 @@
   }
 }
 
-/* SkillPage */
-.SkillPage {
+/* IntroPage */
+.IntroPage {
   @include pageDefault;
+  text-align: center;
+  padding: 0 14.2%;
   padding-bottom: 60px;
 
-  .SkillTitle {
+  .IntroTitle {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -137,11 +139,40 @@
     }
   }
 
+  .IntroContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    p, span {
+      font-size: 0.92em;
+      line-height: 22px;
+    }
+
+    .background {
+      padding: 0 2px;
+      background-color: $yellow;
+      color: #000;
+    }
+  }
+}
+
+/* SkillPage */
+.SkillPage {
+  @include pageDefault;
+  padding: 0 14.2%;
+  padding-bottom: 60px;
+
+  .SkillTitle {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
   .SkillList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 12%;
   }
 }
 
@@ -241,6 +272,17 @@
     }
   }
 
+  .IntroPage {
+
+    .IntroTitle {
+
+    }
+
+    .IntroContent {
+
+    }
+  }
+
   .SkillPage {
     .SkillTitle {
       margin-top: 80px;
@@ -260,6 +302,7 @@
   }
 }
 
+/* 스마트폰 / 태블릿 */
 @media (pointer: coarse) {
   .MainPage {
     .MainRight {
@@ -267,13 +310,29 @@
     }
   }
 
-  .SkillPage {
-    .SkillTitle {
+  .IntroPage {
+    padding: 0 10%;
+
+    .IntroTitle {
       margin-top: 18%;
     }
 
-    .SkillList {
-      padding: 0 6%;
+    .IntroContent {
+      p, span {
+        font-size: 0.88em;
+      }
+
+      > div {
+        text-align: left;
+      }
+    }
+  }
+
+  .SkillPage {
+    padding: 0 10%;
+
+    .SkillTitle {
+      margin-top: 18%;
     }
   }
 
@@ -294,6 +353,7 @@
   }
 }
 
+/* 스마트폰 가로모드 */
 @media (pointer: coarse) and (orientation:landscape) {
   .MainPage {
     .MainRight {
@@ -301,10 +361,20 @@
     }
   }
 
+  .IntroPage {
+    .IntroTitle {
+      margin-top: 4.2%;
+      margin-bottom: 20px;
+    }
+
+    .IntroContent {
+      gap: 25px;
+    }
+  }
+
   .SkillPage {
     .SkillTitle {
       margin-top: 4.2%;
-      margin-bottom: 20px;
     }
   }
 

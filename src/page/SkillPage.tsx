@@ -5,9 +5,7 @@ export const SkillPage = () => {
   return (
     <div className='SkillPage'>
       <div className='SkillTitle'>
-        <p>항상 도전하는 개발자</p>
-        <h1>이주미</h1>
-        <p></p>
+        <h3>보유 기술</h3>
       </div>
       <div className='SkillList'>
         {
