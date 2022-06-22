@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header>
       <div className='HeaderLeft'>
-        <img src='image/jumim_logo.jpg' />
+        <img src={`${process.env.PUBLIC_URL}/image/logo.png`} />
       </div>
       <div className='HeaderRight'>
         <a href='https://github.com/Jumim' target='_blank'><FaGithub /></a>

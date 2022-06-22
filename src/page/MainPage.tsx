@@ -7,7 +7,7 @@ export const MainPage = () => {
   return (
     <div className='MainPage'>
       <div className='MainLeft'>
-        <img src='image/da014fa85da4a.jpg' />
+        <img src={`${process.env.PUBLIC_URL}/image/da014fa85da4a.jpg`} />
       </div>
       <div className='MainRight'>
         <div className='MyName'>

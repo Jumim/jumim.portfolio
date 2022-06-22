@@ -21,7 +21,7 @@ export const Project = ({ projectData }: ProjectType) => {
           <h4>{projectData.name}</h4>
         </div>
         <div className='ProjectImg'>
-          <img src={`image/${projectData.img}`} />
+          <img src={`${process.env.PUBLIC_URL}/image/${projectData.img}`} />
         </div>
         <div className='ProjectContent'>
           {projectData.content}
