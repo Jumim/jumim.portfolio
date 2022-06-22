@@ -1,7 +1,5 @@
 ![header](https://capsule-render.vercel.app/api?type=soft&color=96a5ff&height=140&section=header&text=PORTFOLIO&fontSize=40&fontColor=f5f9ff&animation=blink)
 
----
-
 🔗 [https://jumim.github.io/jumim-portfolio/](https://jumim.github.io/jumim-portfolio/)
 
 ---
