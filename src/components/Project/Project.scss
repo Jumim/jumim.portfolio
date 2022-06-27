@@ -3,7 +3,7 @@
 .Project {
   position: relative;
   width: 100%;
-  padding-top: 60vh;
+  padding-top: 140%;
   margin: 0 auto;
   background-color: $white;
   color: $gray;
@@ -56,15 +56,22 @@
     gap: 15px;
 
     a {
-      font-size: 25px;
+      font-size: 1.35em;
       color: $gray;
     }
   }
 }
 
+@media (pointer: fine) and (max-width: 1200px) {
+  .Project {
+    padding-top: 100%;
+  }
+}
 
 @media (pointer: coarse) and (orientation:landscape) {
   .Project {
+    padding-top: 35%;
+
     .ProjectImg {
       display: none;
     }
