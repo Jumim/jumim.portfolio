@@ -1,16 +1,16 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/navigation';
-import { Project } from 'components';
-import { MyProject } from 'data';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css/navigation'
+import { Project } from 'components'
+import { MyProject } from 'data'
 
 export const ProjectPage = () => {
   return (
-    <div className='ProjectPage'>
-      <div className='ProjectTitle'>
+    <div className="ProjectPage">
+      <div className="ProjectTitle">
         <h3>프로젝트</h3>
       </div>
       <Swiper
-        className='ProjectSwiper'
+        className="ProjectSwiper"
         loop={true}
         centeredSlides={true}
         spaceBetween={10}
@@ -26,15 +26,13 @@ export const ProjectPage = () => {
             spaceBetween: 20,
           },
         }}
-          >
-        {
-        MyProject.map((data: any, i: number) =>
+      >
+        {MyProject.map((data: any, i: number) => (
           <SwiperSlide key={'Project_' + i}>
             <Project projectData={data} />
           </SwiperSlide>
-        )
-      }
+        ))}
       </Swiper>
-    </div >
+    </div>
   )
 }

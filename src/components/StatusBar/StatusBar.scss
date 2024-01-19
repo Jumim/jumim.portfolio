@@ -71,7 +71,7 @@
         color: #fff;
         font-size: 11px;
         line-height: 16px;
-        letter-spacing: -.5px;
+        letter-spacing: -0.5px;
       }
 
       p:before {
@@ -96,7 +96,7 @@
   &.Status2,
   &.Status2-5 {
     ul {
-      li:nth-child(-n+2):before {
+      li:nth-child(-n + 2):before {
         background: $purple;
       }
     }
@@ -113,7 +113,7 @@
   }
 
   &.Status3 {
-    li:nth-child(-n+3):before {
+    li:nth-child(-n + 3):before {
       background: $purple;
     }
   }
@@ -135,7 +135,7 @@
   }
 }
 
-@media (pointer: coarse) and (orientation:landscape) {
+@media (pointer: coarse) and (orientation: landscape) {
   .StatusBar {
     width: 20%;
   }

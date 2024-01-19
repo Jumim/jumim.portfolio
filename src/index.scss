@@ -2,10 +2,10 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 @font-face {
-    font-family: 'KCC-eunyoung';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'KCC-eunyoung';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -18,7 +18,18 @@ body {
   overflow-y: hidden;
 }
 
-div, p, span, a, h1, h2, h3, h4, h5, h6, ul ,li {
+div,
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -40,14 +51,15 @@ h1 {
   font-size: 2.8em;
 }
 
-p, span {
+p,
+span {
   font-size: 0.8em;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
 
 ul {
-	list-style:none;
+  list-style: none;
 }
 
 a {

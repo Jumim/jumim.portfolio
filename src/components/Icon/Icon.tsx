@@ -1,15 +1,11 @@
-import React from 'react';
-import './Icon.scss';
+import React from 'react'
+import './Icon.scss'
 
 interface IconType {
-  children: React.ReactChild | React.ReactChild[]
+  children: React.ReactNode | React.ReactNode[]
   className?: 'gray' | undefined
 }
 
-export const Icon = ({children, className}: IconType) => {
-  return (
-    <div className={['Icon', (className === undefined ? 'default' : className)].join(' ')}>
-      {children}
-    </div>
-  )
+export const Icon = ({ children, className }: IconType) => {
+  return <div className={['Icon', className === undefined ? 'default' : className].join(' ')}>{children}</div>
 }

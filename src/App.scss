@@ -24,7 +24,7 @@
   width: 5px;
   height: 20px;
   border-radius: 0;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* MainPage */
@@ -95,7 +95,7 @@
             left: 0;
             transform-origin: right;
             transform: scaleX(0);
-            transition: transform .3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
           }
 
           &:hover:before {
@@ -145,7 +145,8 @@
     flex-wrap: wrap;
     gap: 50px;
 
-    p, span {
+    p,
+    span {
       font-size: 0.92em;
       line-height: 22px;
     }
@@ -195,7 +196,7 @@
       padding: 0 0 0 32px;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: 8px;
         top: 0;
@@ -212,7 +213,7 @@
         font-size: 22px;
 
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           left: 2px;
           top: 4px;
@@ -303,7 +304,8 @@
     }
 
     .IntroContent {
-      p, span {
+      p,
+      span {
         font-size: 0.88em;
       }
 
@@ -339,7 +341,7 @@
 }
 
 /* 스마트폰 가로모드 */
-@media (pointer: coarse) and (orientation:landscape) {
+@media (pointer: coarse) and (orientation: landscape) {
   .MainPage {
     .MainRight {
       padding-top: 5.2%;

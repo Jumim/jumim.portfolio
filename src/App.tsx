@@ -1,20 +1,22 @@
-import { useState } from 'react';
-import { Pagination, Mousewheel } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Header, ScrollDown } from 'components';
-import { MainPage, SkillPage, CareerPage, ProjectPage, IntroPage } from 'page';
-import './App.scss';
+import { useState } from 'react'
 
-function App() {
-  const [lastPage, setLastPage] = useState(false);
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Mousewheel } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+import { Header, ScrollDown } from 'components'
+import { MainPage, SkillPage, CareerPage, ProjectPage, IntroPage } from 'page'
+import './App.scss'
+
+const App = () => {
+  const [lastPage, setLastPage] = useState(false)
 
   return (
     <div className="App">
       <Header />
       <Swiper
-        className='ContentsSwiper'
+        className="ContentsSwiper"
         modules={[Pagination, Mousewheel]}
         direction={'vertical'}
         slidesPerView={1}
@@ -39,9 +41,9 @@ function App() {
           <ProjectPage />
         </SwiperSlide>
       </Swiper>
-      <ScrollDown className={ !lastPage ? 'on' : 'off' } />
+      <ScrollDown className={!lastPage ? 'on' : 'off'} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
